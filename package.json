@@ -1,9 +1,9 @@
 {
-  "name": "workout_manager",
-  "private": true,
-  "packageManager": "pnpm@10.14.0",
-  "scripts": {
-    "dev:mobile": "pnpm --filter @apps/mobile start",
-    "dev:web": "pnpm --filter @apps/web dev"
-  }
+    "name": "workout_manager",
+    "private": true,
+    "packageManager": "pnpm@10.14.0",
+    "scripts": {
+        "dev:mobile": "pnpm --filter @apps/mobile start",
+        "dev:web": "pnpm --filter @apps/web dev"
+    }
 }
