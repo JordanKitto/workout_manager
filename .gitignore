@@ -1,0 +1,10 @@
+node_modules
+.expo
+.expo-shared
+dist
+.build
+.next
+android
+ios
+*.log
+.DS_Store
