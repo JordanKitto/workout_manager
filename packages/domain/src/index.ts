@@ -1,2 +1,1 @@
-// minimal export to prove wiring
-export const DOMAIN_OK = "domain-ready";
+export * from "./utils/greetings";
