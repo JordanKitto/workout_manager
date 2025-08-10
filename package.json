@@ -2,16 +2,25 @@
     "name": "workout_manager",
     "private": true,
     "packageManager": "pnpm@9.12.3",
-    "scripts": {
-        "dev:web": "pnpm --filter @apps/web dev",
-        "dev:mobile": "pnpm --filter @apps/mobile start",
-        "build": "pnpm -r build"
+    "overrides": {
+        "@types/react": "18.3.23",
+        "@types/react-dom": "18.3.2"
+    },
+    "devDependencies": {
+        "@expo/cli": "^0.24.20",
+        "@types/react": "18.3.23",
+        "@types/react-dom": "18.3.2",
+        "react-native": "0.73.9",
+        "typescript": "5.9.2"
     },
     "workspaces": [
         "apps/*",
         "packages/*"
     ],
-    "devDependencies": {
-        "typescript": "^5.0.0"
+    "scripts": {
+        "dev:web": "pnpm --filter @apps/web dev",
+        "dev:mobile": "pnpm --filter @apps/mobile start",
+        "build": "pnpm -r build",
+        "clean": "rimraf node_modules pnpm-lock.yaml && pnpm -r exec rimraf node_modules"
     }
 }

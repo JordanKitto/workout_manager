@@ -1,25 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { DOMAIN_OK } from "@gc/domain";
+import React, { useState } from "react";
+import { SafeAreaView, Text, View } from "react-native";
+import { greet } from "@workout/domain";
+import { AppButton } from "@workout/ui";
 
 export default function App() {
+  const [count, setCount] = useState(0);
   return (
-    <View style={styles.container}>
-      <Text style={{ fontSize: 22, color: "#111", marginBottom: 12 }}>
-        Shared: {DOMAIN_OK}
-      </Text>
-      <Text style={{ color: "#333" }}>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View style={{ padding: 16 }}>
+        <Text style={{ fontSize: 24, fontWeight: "600" }}>Workout Manager</Text>
+        <Text style={{ marginTop: 8 }}>{greet("Jordan")}</Text>
+        <View style={{ marginTop: 12 }}>
+          <AppButton title={`Clicks: ${count}`} onPress={() => setCount(c => c + 1)} />
+        </View>
+        <Text style={{ marginTop: 8 }}>Shared UI works on mobile.</Text>
+      </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingTop: 60,
-    alignItems: "center",
-    justifyContent: "flex-start"
-  }
-});
