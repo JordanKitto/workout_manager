@@ -8,10 +8,11 @@
     "build": "echo \"skip mobile build for now\""
   },
   "dependencies": {
+    "@babel/runtime": "^7.28.2",
+    "@workout/domain": "workspace:*",
+    "@workout/ui": "workspace:*",
     "expo": "50.0.21",
     "react": "18.3.1",
-    "react-native": "0.73.9",
-    "@workout/domain": "workspace:*",
-    "@workout/ui": "workspace:*"
+    "react-native": "0.73.9"
   }
 }
