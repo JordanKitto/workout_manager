@@ -1,15 +1,17 @@
 {
   "name": "@apps/mobile",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "expo start",
+    "start": "expo start -c",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "build": "echo \"skip mobile build for now\""
   },
   "dependencies": {
+    "expo": "50.0.21",
+    "react": "18.3.1",
+    "react-native": "0.73.9",
     "@workout/domain": "workspace:*",
-    "expo": "latest",
-    "react": "latest",
-    "react-native": "latest"
+    "@workout/ui": "workspace:*"
   }
 }

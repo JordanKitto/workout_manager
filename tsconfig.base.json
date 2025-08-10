@@ -11,6 +11,14 @@
         "skipLibCheck": true,
         "noEmit": true,
         "jsx": "react-jsx",
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+            "@workout/domain": [
+                "packages/domain/src"
+            ],
+            "@workout/ui": [
+                "packages/ui/src"
+            ]
+        }
     }
 }
