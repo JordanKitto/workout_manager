@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView, Text, View } from "react-native";
-import { greet } from "@workout/domain";
+import { greet, calcOneRepMax } from "@workout/domain";
 import { AppButton } from "@workout/ui";
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
         <View style={{ marginTop: 12 }}>
           <AppButton title={`Clicks: ${count}`} onPress={() => setCount(c => c + 1)} />
         </View>
+        <text style={{ marginTop: 8 }}>1RM estimate for 100 x 5 {calcOneRepMax(100, 5)} </text>
         <Text style={{ marginTop: 8 }}>Shared UI works on mobile.</Text>
       </View>
     </SafeAreaView>
