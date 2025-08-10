@@ -1,10 +1,48 @@
-node_modules
-.expo
-.expo-shared
-dist
-.build
-.next
-android
-ios
-*.log
+# Node and pnpm
+node_modules/
+.pnpm-store/
+.pnp.*
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+coverage/
+
+# IDE and OS
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# Expo and React Native
+.expo/
+.expo-shared/
+*.log
+*.tmp
+*.swp
+
+# Android
+**/android/.gradle/
+**/android/app/build/
+**/android/build/
+**/android/local.properties
+
+# iOS
+**/ios/build/
+**/ios/Pods/
+**/ios/*.xcodeproj/*
+!**/ios/*.xcodeproj/project.pbxproj
+!**/ios/*.xcodeproj/xcshareddata/
+!**/ios/*.xcodeproj/project.xcworkspace/
+**/ios/*.xcworkspace/*
+!**/ios/*.xcworkspace/contents.xcworkspacedata
+
+# Env
+.env
+.env.*
