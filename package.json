@@ -1,14 +1,17 @@
 {
     "name": "workout_manager",
     "private": true,
-    "packageManager": "pnpm@9.0.0",
+    "packageManager": "pnpm@9.12.3",
     "scripts": {
-        "dev:web": "pnpm --filter apps/web dev",
-        "dev:mobile": "pnpm --filter apps/mobile start",
+        "dev:web": "pnpm --filter @apps/web dev",
+        "dev:mobile": "pnpm --filter @apps/mobile start",
         "build": "pnpm -r build"
     },
     "workspaces": [
         "apps/*",
         "packages/*"
-    ]
+    ],
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    }
 }

@@ -4,16 +4,7 @@
     "private": true,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "sideEffects": false,
     "scripts": {
-        "build": "tsc -p tsconfig.build.json",
-        "clean": "rimraf dist"
-    },
-    "peerDependencies": {
-        "typescript": "*"
-    },
-    "devDependencies": {
-        "typescript": "^5.5.0",
-        "rimraf": "^5.0.5"
+        "build": "tsc -p tsconfig.build.json"
     }
 }
