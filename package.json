@@ -2,25 +2,26 @@
     "name": "workout_manager",
     "private": true,
     "packageManager": "pnpm@9.12.3",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "overrides": {
         "@types/react": "18.3.23",
-        "@types/react-dom": "18.3.2"
+        "@types/react-dom": "18.3.2",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
     },
     "devDependencies": {
         "@expo/cli": "^0.24.20",
         "@types/react": "18.3.23",
         "@types/react-dom": "18.3.2",
-        "react-native": "0.73.9",
         "typescript": "5.9.2"
     },
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ],
     "scripts": {
         "dev:web": "pnpm --filter @apps/web dev",
         "dev:mobile": "pnpm --filter @apps/mobile start",
         "build": "pnpm -r build",
-        "clean": "rimraf node_modules pnpm-lock.yaml && pnpm -r exec rimraf node_modules"
+        "clean": "node -e \"const {execSync}=require('node:child_process'); try{execSync('git clean -xfd -e .env -e .env.local',{stdio:'inherit'})}catch(e){process.exit(0)}\" && pnpm -r exec node -e \"const {rmSync}=require('node:fs'); try{rmSync('node_modules',{recursive:true,force:true})}catch(e){}\""
     }
 }
