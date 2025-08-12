@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.28.2",
+    "@react-navigation/bottom-tabs": "^7.4.6",
+    "@react-navigation/native": "^7.1.17",
     "@workout/domain": "workspace:*",
     "@workout/ui": "workspace:*",
     "expo": "50.0.21",
