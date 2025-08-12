@@ -2,9 +2,12 @@
     "name": "@workout/domain",
     "version": "0.1.0",
     "private": true,
+    "type": "commonjs",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc -p tsconfig.build.json"
+        "build": "tsc -p tsconfig.build.json",
+        "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+        "smoke": "pnpm run build && node smoke.mjs"
     }
 }
