@@ -36,6 +36,8 @@ export type WorkoutTemplate = {
     name: string;
     dayIndex: number;
     exercises: ID[];
+    // NEW: optional target reps/weight per exercise ID
+    targets?: Record<ID, { reps: number; weight: number }>;
 };
 
 export type Workout = {

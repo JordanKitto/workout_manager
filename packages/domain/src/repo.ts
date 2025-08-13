@@ -15,6 +15,18 @@ class InMemoryRepo {
         return ex ? ex.name : undefined;
     }
 
+    // NEW: set default targets after creating a template
+    setTemplateTargets(templateId: ID, targets: Record<ID, { reps: number; weight: number }>) {
+        const t = this.templates.get(templateId);
+        if (!t) throw new Error("template not found");
+        t.targets = { ...(t.targets ?? {}), ...targets };
+    }
+
+    // NEW: read helper
+    getTemplateTargets(templateId: ID): Record<ID, { reps: number; weight: number }> | undefined {
+        return this.templates.get(templateId)?.targets;
+    }
+
     // Accept rich objects from DEFAULT_EXERCISES
     seedExercises(list: Array<Pick<Exercise, "name" | "muscleGroup" | "equipment" | "type">>) {
         list.forEach(item => {
